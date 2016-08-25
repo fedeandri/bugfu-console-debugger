@@ -1,0 +1,77 @@
+#wp-admin-bar-bugfu-console-debugger a {
+    background-color: #ff0000 !important;
+}
+
+#wp-admin-bar-bugfu-console-debugger a:hover {
+    background-color: #dd0000 !important;
+    color: #ffffff !important;
+}
+
+#bugfu-subtitle {
+	margin-top: 0px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#bugfu-disclaimer {
+	margin-top: 6px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#bugfu-status {
+	padding: 5px;
+	width: 140px;
+	margin-left: 6px;
+	margin-right: 6px;
+	text-align: center;
+	display: inline-block;
+	border-style: solid;
+	border-width: 0.5px;
+}
+
+.bugfu-on {
+	background-color: #ff3333;
+	border-color: #ff3333;
+	color: #ffffff;
+}
+
+.bugfu-off {
+	background-color: #fff;
+	border-color: #ccc;
+}
+
+#bugfu-wrap form {
+	margin-bottom: 40px;
+}
+
+#bugfu-wrap code {
+	margin-top: 8px;
+	padding: 8px;
+	line-height: 14px;
+	display: inline-block;
+}
+
+#bugfu-wrap p {
+	margin-top: -10px;
+	margin-bottom: 40px;
+}
+
+#bugfu-wrap ul, ol {
+	padding-top: 0px;
+	margin-top: -40px;
+	margin-left: 18px;
+	margin-bottom: 48px;
+}
+
+#bugfu-wrap ul {
+	list-style-type: disc;
+}
+#bugfu-wrap ol {
+	list-style-type: decimal;
+}
+#bugfu-wrap li {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
