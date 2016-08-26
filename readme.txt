@@ -7,7 +7,7 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-BugFu lets you log from PHP directly to your Browser JavaScript Console - Meant as an aid to those practicing the ancient art of debugging.
+BugFu lets you log from PHP directly to your Browser JavaScript Console - Meant as an aid to those practicing the ancient art of debugging
 
 
 == Description ==
@@ -49,7 +49,7 @@ BugFu::log($my_string_content);
 BugFu::log($my_object-array-variable);
 `
 
-**Developers**
+**DEVELOPERS**
 
 Official Github repository:  
 https://github.com/fedeandri/bugfu-console-debugger  
@@ -64,10 +64,11 @@ https://github.com/fedeandri/bugfu-console-debugger
 == Screenshots ==
 
 1. The admin page when BugFu is ON
-2. The admin page when BugFu is OFF
+2. The Browser JavaScript Console when BugFu is ON
+3. The admin page when BugFu is OFF
 
 == Changelog ==
 
 = 1.0 =
-* First version, log from PHP directly to your browser JavaScript console
+* First version, log your debug messages from PHP directly to your browser JavaScript console
 
