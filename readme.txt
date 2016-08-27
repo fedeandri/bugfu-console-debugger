@@ -27,6 +27,7 @@ Open your browser console, if you see this header, BugFu is working properly
 **HOW TO OPEN YOUR BROWSER JAVASCRIPT CONSOLE**
 
 If you've never used the JavaScript Console before, here's how you open it:
+
 * Chrome PC shift+ctrl+j   Chrome Mac alt+cmd+j
 * Firefox PC shift+ctrl+k   Firefox Mac alt+cmd+k
 * Safari PC shift+ctrl+c   Safari Mac alt+cmd+c

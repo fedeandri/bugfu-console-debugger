@@ -5,8 +5,7 @@ Download it from the WordPress plugin directory:
 https://wordpress.org/plugins/bugfu-console-developer/
 
 ## Description
-BugFu lets you log from PHP directly to your Browser JavaScript Console
--- Meant as an aid to those practicing the ancient art of debugging --
+Log from PHP directly to your Browser JavaScript Console. BugFu is meant as an aid to those practicing the ancient art of debugging.
 
 ## How to check if BugFu is working
 Open your browser console, if you see this header, BugFu is working properly
