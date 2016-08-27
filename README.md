@@ -51,6 +51,6 @@ BugFu::log($my_object-array-variable);
 
 
 ## License
-The Auto Approve Comments plugin is licensed under the GPL v2 or later:  
+The BugFu Console Debugger plugin is licensed under the GPL v2 or later:  
 http://www.gnu.org/licenses/gpl-2.0.html
 
