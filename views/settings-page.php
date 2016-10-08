@@ -57,6 +57,13 @@
 			<br>
 			<?php echo self::PLUGIN_SHORT_NAME ?>::log($my_object-array-variable);<br>
 			<br>
+			<strong>
+				# Call it with the second optional argument set to "false"<br>
+				# to turn off the backtrace info (which is on by default)
+			</strong>
+			<br>
+			<?php echo self::PLUGIN_SHORT_NAME ?>::log($my_content, false);<br>
+			<br>
 		</code>
 		</p>
 

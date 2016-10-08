@@ -18,9 +18,9 @@ Open your browser console, if you see this header, BugFu is working properly
 
 ## How to open your Browser JavaScript Console
 If you've never used the JavaScript Console before, here's how you open it:
-* Chrome PC shift+ctrl+j   Chrome Mac alt+cmd+j
-* Firefox PC shift+ctrl+k   Firefox Mac alt+cmd+k
-* Safari PC shift+ctrl+c   Safari Mac alt+cmd+c
+* Chrome PC shift+ctrl+j - Chrome Mac alt+cmd+j
+* Firefox PC shift+ctrl+k - Firefox Mac alt+cmd+k
+* Safari PC shift+ctrl+c - Safari Mac alt+cmd+c
 
 ## How to use BugFu with WordPress
 Call the log static method from wherever you are within the WordPress PHP code
@@ -36,6 +36,10 @@ BugFu::log($my_string_content);
 # Call it with a non-string argument to output the structured
 # representation of that argument - it uses var_export() 
 BugFu::log($my_object-array-variable);
+
+# Call it with the second optional argument set to "false"
+# to turn off the backtrace info (which is on by default) 
+BugFu::log($my_content, false);
 ```
 
 ## Interface screenshots

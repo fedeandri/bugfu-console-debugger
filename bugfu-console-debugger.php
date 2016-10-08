@@ -4,7 +4,7 @@
  *	Plugin Name: BugFu Console Debugger
  *	Plugin URI: https://github.com/fedeandri/bugfu-console-debugger
  *	Description: BugFu lets you log from PHP directly to your Browser JavaScript Console - Meant as an aid to those practicing the ancient art of debugging
- *	Version: 1.0
+ *	Version: 1.1
  *	Author: Federico Andrioli
  *	Author URI: https://it.linkedin.com/in/fedeandri
  *	GPLv2 or later
@@ -19,7 +19,7 @@ if ( ! class_exists( 'BugFu' ) ) {
 	class BugFu
 	{
 
-		const PLUGIN_VERSION = '1.0';
+		const PLUGIN_VERSION = '1.1';
 		const PLUGIN_PREFIX = 'bugfu';
 		const PLUGIN_SHORT_NAME = 'BugFu';
 		const PLUGIN_NAME = 'BugFu Console Debugger';
@@ -114,7 +114,7 @@ if ( ! class_exists( 'BugFu' ) ) {
 			exit();
 		}
 
-		public static function log( $debug_mixed = '' ) {
+		public static function log( $debug_mixed = '', $backtrace_on = true ) {
 
 			$bugfu_status = get_option(self::OPTION_NAME_STATUS);
 
@@ -125,15 +125,21 @@ if ( ! class_exists( 'BugFu' ) ) {
 				}
 
 				$debug_content = "\n\n";
-				$debug_backtrace = debug_backtrace();
 
-				$debug_content .= 'FILE : '.$debug_backtrace[0]['file']."\n";
-				if ( $debug_backtrace[1]['class'] )
-					$debug_content .= 'CLASS: '.$debug_backtrace[1]['class']."\n";
-				if ( $debug_backtrace[1]['function'] )
-					$debug_content .= 'FUNC : '.$debug_backtrace[1]['function']."\n";
-				$debug_content .= 'LINE : '.$debug_backtrace[0]['line']."\n";
-				$debug_content .= "\n";
+				if ( $backtrace_on ) {
+
+					$debug_backtrace = debug_backtrace();
+
+					$debug_content .= 'FILE : '.$debug_backtrace[0]['file']."\n";
+					if ( $debug_backtrace[1]['class'] )
+						$debug_content .= 'CLASS: '.$debug_backtrace[1]['class']."\n";
+					if ( $debug_backtrace[1]['function'] )
+						$debug_content .= 'FUNC : '.$debug_backtrace[1]['function']."\n";
+					$debug_content .= 'LINE : '.$debug_backtrace[0]['line']."\n";
+					$debug_content .= "\n";
+
+				}
+
 
 				if( isset($debug_mixed) && $debug_mixed != '' ) {
 					$debug_content .= $debug_mixed."\n";
