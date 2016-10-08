@@ -4,7 +4,7 @@
  *	Plugin Name: BugFu Console Debugger
  *	Plugin URI: https://github.com/fedeandri/bugfu-console-debugger
  *	Description: BugFu lets you log from PHP directly to your Browser JavaScript Console - Meant as an aid to those practicing the ancient art of debugging
- *	PLUGIN_VERSION: 1.0
+ *	Version: 1.0
  *	Author: Federico Andrioli
  *	Author URI: https://it.linkedin.com/in/fedeandri
  *	GPLv2 or later
