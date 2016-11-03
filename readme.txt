@@ -1,9 +1,9 @@
 === BugFu Console Debugger ===
 Contributors: fedeandri
-Tags: debug, debugging, debug bar, debug notification, dev, develop, development, error, log, display error, error log, error notification, error reporting, bug, bugs, find bug, bug report, issue, issues, multisite, plugin, browser, console, php, javascript, stacktrace, backtrace
+Tags: debug, debugging, debug bar, debug notification, dev, develop, development, error, log, display error, error log, error notification, error reporting, bug, bugs, find bug, bug report, issue, issues, multisite, plugin, browser, console, php, jquery, javascript, ajax, stacktrace, backtrace
 Requires at least: 3.8
-Tested up to: 4.6
-Stable tag: 1.1
+Tested up to: 4.7
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,9 @@ https://github.com/fedeandri/bugfu-console-debugger
 
 
 == Changelog ==
+
+= 1.2 =
+* Add the ability to debug AJAX calls
 
 = 1.1 =
 * Fixed a bug that made it look like BugFu constantly needed to be updated (thanks to Jonathan Bossenger)

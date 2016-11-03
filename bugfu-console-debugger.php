@@ -4,7 +4,7 @@
  *	Plugin Name: BugFu Console Debugger
  *	Plugin URI: https://github.com/fedeandri/bugfu-console-debugger
  *	Description: BugFu lets you log from PHP directly to your Browser JavaScript Console - Meant as an aid to those practicing the ancient art of debugging
- *	Version: 1.1
+ *	Version: 1.2
  *	Author: Federico Andrioli
  *	Author URI: https://it.linkedin.com/in/fedeandri
  *	GPLv2 or later
@@ -15,11 +15,11 @@
 defined( 'ABSPATH' ) or die();
 
 
-if ( ! class_exists( 'BugFu' ) ) {
+if ( !class_exists( 'BugFu' ) ) {
 	class BugFu
 	{
 
-		const PLUGIN_VERSION = '1.1';
+		const PLUGIN_VERSION = '1.2';
 		const PLUGIN_PREFIX = 'bugfu';
 		const PLUGIN_SHORT_NAME = 'BugFu';
 		const PLUGIN_NAME = 'BugFu Console Debugger';
@@ -103,15 +103,26 @@ if ( ! class_exists( 'BugFu' ) ) {
 
 		public function bugfu_ajax_read_debug_log() {
 
-			$result = self::read_debug_log();
+			$response = array();
 
-			if( $result != '' ) {
+			$header = self::get_bugfu_header();
+			$log = self::read_debug_log();
+			
+			if( $log != '' ) {
 				update_option( self::OPTION_NAME_LOG, '' );
 			}
 
-			echo "\n".self::LOG_HEADER_BAR."\n".self::LOG_HEADER."\n".self::LOG_HEADER_BAR.$result."\n\n\n\n";
+			$response['header'] = $header;
+			$response['log'] = $log;
+
+			wp_send_json_success( $response );
 
 			exit();
+		}
+
+		public static function get_bugfu_header() {
+			$header = self::LOG_HEADER_BAR."\n".self::LOG_HEADER."\n".self::LOG_HEADER_BAR;
+			return $header;
 		}
 
 		public static function log( $debug_mixed = '', $backtrace_on = true ) {
@@ -155,7 +166,7 @@ if ( ! class_exists( 'BugFu' ) ) {
 
 		private static function read_debug_log() {
 
-			$debug_log = unserialize( get_option( self::OPTION_NAME_LOG ) );
+			$debug_log = trim( unserialize( get_option( self::OPTION_NAME_LOG ) ) );
 
 			return $debug_log;
 		}
