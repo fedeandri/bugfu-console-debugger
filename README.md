@@ -2,7 +2,7 @@
 
 ## Official URL
 Download it from the WordPress plugin directory:  
-https://wordpress.org/plugins/bugfu-console-developer/
+https://wordpress.org/plugins/bugfu-console-debugger/
 
 ## Description
 Log from PHP directly to your Browser JavaScript Console.  
