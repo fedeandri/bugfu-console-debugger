@@ -4,7 +4,7 @@
  *	Plugin Name: BugFu Console Debugger
  *	Plugin URI: https://github.com/fedeandri/bugfu-console-debugger
  *	Description: BugFu lets you log from PHP directly to your Browser JavaScript Console - Meant as an aid to those practicing the ancient art of debugging
- *	Version: 1.2.1
+ *	Version: 1.2.2
  *	Author: Federico Andrioli
  *	Author URI: https://it.linkedin.com/in/fedeandri
  *	GPLv2 or later
@@ -19,7 +19,7 @@ if ( !class_exists( 'BugFu' ) ) {
 	class BugFu
 	{
 
-		const PLUGIN_VERSION = '1.2.1';
+		const PLUGIN_VERSION = '1.2.2';
 		const PLUGIN_PREFIX = 'bugfu';
 		const PLUGIN_SHORT_NAME = 'BugFu';
 		const PLUGIN_NAME = 'BugFu Console Debugger';
@@ -142,9 +142,9 @@ if ( !class_exists( 'BugFu' ) ) {
 					$debug_backtrace = debug_backtrace();
 
 					$debug_content .= 'FILE : '.$debug_backtrace[0]['file']."\n";
-					if ( $debug_backtrace[1]['class'] )
+					if ( isset( $debug_backtrace[1]['class'] ) )
 						$debug_content .= 'CLASS: '.$debug_backtrace[1]['class']."\n";
-					if ( $debug_backtrace[1]['function'] )
+					if ( isset( $debug_backtrace[1]['function'] ) )
 						$debug_content .= 'FUNC : '.$debug_backtrace[1]['function']."\n";
 					$debug_content .= 'LINE : '.$debug_backtrace[0]['line']."\n";
 					$debug_content .= "\n";
