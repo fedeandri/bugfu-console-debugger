@@ -7,13 +7,12 @@ Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Log from PHP directly to your Browser JavaScript Console. BugFu is meant as an aid to those practicing the ancient art of debugging.
+Easily Log and Debug your PHP code using the Browser JavaScript Console. Especially useful for themes and plugins develpers.
 
 
 == Description ==
 
-BugFu lets you log from PHP directly to your Browser JavaScript Console  
-- Meant as an aid to those practicing the ancient art of debugging -
+Easily Log and Debug your PHP code using the Browser JavaScript Console. Especially useful for themes and plugins develpers.
 
 **HOW TO CHECK IF BUGFU IS WORKING**
 
