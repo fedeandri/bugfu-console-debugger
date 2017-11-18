@@ -2,7 +2,7 @@
 Contributors: fedeandri
 Tags: debug, debugging, debug bar, debug notification, dev, develop, development, error, log, display error, error log, error notification, error reporting, bug, bugs, find bug, bug report, issue, issues, multisite, plugin, browser, console, php, jquery, javascript, ajax, stacktrace, backtrace
 Requires at least: 3.8
-Tested up to: 4.7
+Tested up to: 4.9
 Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
