@@ -1,8 +1,9 @@
 <div class="wrap">
 
 	<h2><?php echo self::PLUGIN_SHORT_NAME ?> Console Debugger</h2>
-	<h3 id="bugfu-subtitle">BugFu lets you log from PHP directly to your Browser JavaScript Console<br>
-		- Meant as an aid to those practicing the ancient art of debugging -</h3>
+	<h3 id="bugfu-subtitle">Easily Log and Debug your PHP code using the Browser JavaScript Console.<br>
+	Especially useful for themes and plugins developers.</h3>
+	<p>Like BugFu? <a href="https://wordpress.org/support/plugin/bugfu-console-debugger/reviews/" target="_blank">Please leave a review</a> - Bugs, feedback? <a href="https://wordpress.org/support/plugin/bugfu-console-debugger" target="_blank">Post on the support forum</a></p>
 
 	<div id="bugfu-wrap">
 

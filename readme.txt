@@ -1,9 +1,9 @@
 === BugFu Console Debugger ===
 Contributors: fedeandri
-Tags: debug, debugging, debug bar, error, log
+Tags: debug, debug bar, php, error, log
 Requires at least: 3.8
 Tested up to: 4.9
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -73,6 +73,9 @@ https://github.com/fedeandri/bugfu-console-debugger
 
 
 == Changelog ==
+
+= 1.2.4 =
+* Add compatibility with old PHP versions (tested from 5.3)
 
 = 1.2.3 =
 * Update and simplify the AJAX calls debugging feature
