@@ -3,8 +3,8 @@
 /*
  *	Plugin Name: BugFu Console Debugger
  *	Plugin URI: https://github.com/fedeandri/bugfu-console-debugger
- *	Description: Easily Log and Debug your PHP code using the Browser JavaScript Console. Especially useful for themes and plugins developers.
- *	Version: 1.2.4
+ *	Description: Log and Debug your Theme/Plugin PHP code using the Browser JavaScript Console.
+ *	Version: 1.2.5
  *	Author: Federico Andrioli
  *	Author URI: https://it.linkedin.com/in/fedeandri
  *	GPLv2 or later
@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) or die();
 if ( !class_exists( 'BugFu' ) ) {
 	class BugFu	{
 
-		const PLUGIN_VERSION = '1.2.4';
+		const PLUGIN_VERSION = '1.2.5';
 		const PLUGIN_PREFIX = 'bugfu';
 		const PLUGIN_SHORT_NAME = 'BugFu';
 		const PLUGIN_NAME = 'BugFu Console Debugger';
@@ -36,6 +36,8 @@ if ( !class_exists( 'BugFu' ) ) {
 			add_action( 'admin_enqueue_scripts', array( &$this, 'enqueue_custom_files') );
 			
 			add_action( 'admin_menu', array( &$this, 'menu_init' ) );
+			add_filter( 'plugin_action_links_'.plugin_basename(__FILE__), array( &$this, 'add_settings_link') );
+
 			add_action( 'admin_init', array( &$this, 'register_db_settings' ) );
 
 			$this->plugin_update();
@@ -64,6 +66,11 @@ if ( !class_exists( 'BugFu' ) ) {
 
 			require('views/settings-page.php');
 
+		}
+
+		public function add_settings_link( $links ) {
+			$links[] = '<a href="'.network_admin_url( 'tools.php?page='.self::PLUGIN_SLUG ).'">'.__('Settings').'</a>';
+			return $links;
 		}
 
 		public function add_toolbar_link( $wp_admin_bar ) {

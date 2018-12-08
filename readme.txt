@@ -7,12 +7,12 @@ Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Easily Log and Debug your PHP code using the Browser JavaScript Console. Especially useful for themes and plugins developers.
+Log and Debug your Theme/Plugin PHP code using the Browser JavaScript Console.
 
 
 == Description ==
 
-Easily Log and Debug your PHP code using the Browser JavaScript Console. Especially useful for themes and plugins developers.
+Log and Debug your Theme/Plugin PHP code using the Browser JavaScript Console.
 
 **HOW TO CHECK IF BUGFU IS WORKING**
 
@@ -73,6 +73,9 @@ https://github.com/fedeandri/bugfu-console-debugger
 
 
 == Changelog ==
+
+= 1.2.5 =
+* Add Settings link
 
 = 1.2.4 =
 * Add compatibility with old PHP versions (tested from 5.3)
