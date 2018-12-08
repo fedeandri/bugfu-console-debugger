@@ -75,7 +75,7 @@ https://github.com/fedeandri/bugfu-console-debugger
 == Changelog ==
 
 = 1.2.5 =
-* Add Settings link
+* Add Settings link on Plugins page
 
 = 1.2.4 =
 * Add compatibility with old PHP versions (tested from 5.3)
