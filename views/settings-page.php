@@ -1,9 +1,11 @@
 <div class="wrap">
 
 	<h2><?php echo self::PLUGIN_SHORT_NAME ?> Console Debugger</h2>
-	<h3 id="bugfu-subtitle">Easily Log and Debug your PHP code using the Browser JavaScript Console.<br>
-	Especially useful for themes and plugins developers.</h3>
-	<p>Like BugFu? <a href="https://wordpress.org/support/plugin/bugfu-console-debugger/reviews/" target="_blank">Please leave a review</a> - Bugs, feedback? <a href="https://wordpress.org/support/plugin/bugfu-console-debugger" target="_blank">Post on the support forum</a></p>
+	<h3 id="bugfu-subtitle">Log and Debug your PHP code with the Browser JavaScript Console.<br>
+	* No browser extension needed * Made for themes and plugins developers.</h3>
+	<p>
+    Bugs, feedback? <a href="https://wordpress.org/support/plugin/bugfu-console-debugger" target="_blank">Post on the support forum</a>
+    <br>Do you find BugFu useful? <a href="https://wordpress.org/support/plugin/bugfu-console-debugger/reviews/" target="_blank">I'd appreciate a positive review &hearts;</a>
 
 	<div id="bugfu-wrap">
 

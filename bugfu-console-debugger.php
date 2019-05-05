@@ -3,8 +3,8 @@
 /*
  *	Plugin Name: BugFu Console Debugger
  *	Plugin URI: https://github.com/fedeandri/bugfu-console-debugger
- *	Description: Log and Debug your Theme/Plugin PHP code using the Browser JavaScript Console.
- *	Version: 1.2.5
+ *	Description: Log/Debug the PHP code in your Theme/Plugin with your Browser Console *no extension needed*
+ *	Version: 1.3.0
  *	Author: Federico Andrioli
  *	Author URI: https://it.linkedin.com/in/fedeandri
  *	GPLv2 or later
@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) or die();
 if ( !class_exists( 'BugFu' ) ) {
 	class BugFu	{
 
-		const PLUGIN_VERSION = '1.2.5';
+		const PLUGIN_VERSION = '1.3.0';
 		const PLUGIN_PREFIX = 'bugfu';
 		const PLUGIN_SHORT_NAME = 'BugFu';
 		const PLUGIN_NAME = 'BugFu Console Debugger';
@@ -200,8 +200,13 @@ if ( !class_exists( 'BugFu' ) ) {
 			add_action( 'wp_ajax_'.self::PLUGIN_PREFIX.'_ajax_read_debug_log',  array( &$this, self::PLUGIN_PREFIX.'_ajax_read_debug_log') );			
 			add_action( 'wp_ajax_nopriv_'.self::PLUGIN_PREFIX.'_ajax_read_debug_log',  array( &$this, self::PLUGIN_PREFIX.'_ajax_read_debug_log') );			
 
+			/* frontend */
 			add_action( 'wp_enqueue_scripts', array( &$this, 'enqueue_custom_files') );
 			add_action( 'wp_enqueue_scripts', array( &$this, 'enqueue_debugger_custom_files') );
+			/* frontend - login */
+			add_action( 'login_enqueue_scripts', array( &$this, 'enqueue_custom_files') );
+			add_action( 'login_enqueue_scripts', array( &$this, 'enqueue_debugger_custom_files') );
+			/* admin */
 			add_action( 'admin_enqueue_scripts', array( &$this, 'enqueue_debugger_custom_files') );
 
 			add_action( 'admin_bar_menu', array( &$this, 'add_toolbar_link' ), 999 );
@@ -213,8 +218,13 @@ if ( !class_exists( 'BugFu' ) ) {
 			remove_action( 'wp_ajax_'.self::PLUGIN_PREFIX.'_ajax_read_debug_log',  array( &$this, self::PLUGIN_PREFIX.'_ajax_read_debug_log')  );
 			remove_action( 'wp_ajax_nopriv_'.self::PLUGIN_PREFIX.'_ajax_read_debug_log',  array( &$this, self::PLUGIN_PREFIX.'_ajax_read_debug_log')  );
 
+            /* frontend */
 			remove_action( 'wp_enqueue_scripts', array( &$this, 'enqueue_custom_files') );
 			remove_action( 'wp_enqueue_scripts', array( &$this, 'enqueue_debugger_custom_files') );
+            /* frontend - login */
+            remove_action( 'login_enqueue_scripts', array( &$this, 'enqueue_custom_files') );
+			remove_action( 'login_enqueue_scripts', array( &$this, 'enqueue_debugger_custom_files') );
+            /* admin */
 			remove_action( 'admin_enqueue_scripts', array( &$this, 'enqueue_debugger_custom_files') );
 
 			remove_action( 'admin_bar_menu', array( &$this, 'add_toolbar_link' ), 999 );

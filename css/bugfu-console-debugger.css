@@ -58,7 +58,8 @@
 	margin-bottom: 40px;
 }
 
-#bugfu-wrap ul, ol {
+#bugfu-wrap ul,
+#bugfu-wrap ol {
 	padding-top: 0px;
 	margin-top: -40px;
 	margin-left: 18px;

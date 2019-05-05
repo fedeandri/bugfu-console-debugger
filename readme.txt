@@ -2,21 +2,21 @@
 Contributors: fedeandri
 Tags: debug, debug bar, php, error, log
 Requires at least: 3.8
-Tested up to: 5.0
-Stable tag: 1.2.5
+Tested up to: 5.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Log and Debug your Theme/Plugin PHP code using the Browser JavaScript Console.
+Log/Debug the PHP code in your Theme/Plugin with your Browser Console *no extension needed*
 
 
 == Description ==
 
-Log and Debug your Theme/Plugin PHP code using the Browser JavaScript Console.
+Log/Debug the PHP code in your Theme/Plugin with your Browser Console *no extension needed* Made for themes and plugins developers.
 
 **HOW TO CHECK IF BUGFU IS WORKING**
 
-Open your browser console, if you see this header, BugFu is working properly
+Open your Browser Console, if you see this header, BugFu is working properly
 `
 ################################
 #### BugFu Console Debugger ####
@@ -25,7 +25,7 @@ Open your browser console, if you see this header, BugFu is working properly
 
 **HOW TO OPEN YOUR BROWSER JAVASCRIPT CONSOLE**
 
-If you've never used the JavaScript Console before, here's how you open it:
+If you've never used the Browser JavaScript Console before, here's how you open it:
 
 * Chrome PC shift+ctrl+j - Chrome Mac alt+cmd+j
 * Firefox PC shift+ctrl+k - Firefox Mac alt+cmd+k
@@ -74,27 +74,28 @@ https://github.com/fedeandri/bugfu-console-debugger
 
 == Changelog ==
 
-= 1.2.5 =
-* Add Settings link on Plugins page
+= 1.3 =
+* Adds the ability to log from the WordPress login page
+* Fixes a minor CSS issue
 
 = 1.2.4 =
-* Add compatibility with old PHP versions (tested from 5.3)
+* Adds compatibility with old PHP versions (tested from 5.3)
 
 = 1.2.3 =
-* Update and simplify the AJAX calls debugging feature
+* Updates and simplifies the AJAX calls debugging feature
 
 = 1.2.2 =
-* Prevent PHP notice when not logging from a class
+* Prevents PHP notice when not logging from a class
 
 = 1.2.1 =
 * Update the AJAX calls debugging feature to avoid CPU overload
 
 = 1.2 =
-* Add the ability to debug AJAX calls
+* Adds the ability to debug AJAX calls
 
 = 1.1 =
-* Fixed a bug that made it look like BugFu constantly needed to be updated (thanks to Jonathan Bossenger)
-* Added a second optional argument to the log method, in order to allow you to turn off the backtrace info which is on by default
+* Fixes a bug that made it look like BugFu constantly needed to be updated (thanks to Jonathan Bossenger)
+* Adds a second optional argument to the log method, in order to allow you to turn off the backtrace info which is on by default
 
 = 1.0 =
 * First version, log your debug messages from PHP directly to your browser JavaScript console
