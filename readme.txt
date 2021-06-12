@@ -2,7 +2,7 @@
 Contributors: fedeandri
 Tags: debug, debug bar, php, error, log
 Requires at least: 3.8
-Tested up to: 5.5
+Tested up to: 5.8
 Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
